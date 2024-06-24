@@ -1,0 +1,13 @@
+<script>
+	let count=1;
+		function increment() {
+			count ++;
+		}
+	function decrement(){
+		count--;
+	}
+</script>
+<h1>count {count}</h1>
+
+<button on:click={increment}>Click me for more </button>
+<button on:click={decrement}>Click me for Less </button>
