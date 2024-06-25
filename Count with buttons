@@ -1,5 +1,6 @@
 <script>
 	let count=1;
+	$: double=count*2;
 		function increment() {
 			count ++;
 		}
@@ -7,7 +8,14 @@
 		count--;
 	}
 </script>
+
 <h1>count {count}</h1>
+<p>Double {double}</p>
+  
+{#if double > 6}
+		<p>Esto es mayor a 6</p>
+	{/if}	
+
 
 <button on:click={increment}>Click me for more </button>
 <button on:click={decrement}>Click me for Less </button>
